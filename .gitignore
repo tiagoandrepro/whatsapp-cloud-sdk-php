@@ -1,0 +1,34 @@
+# Composer
+composer.lock
+vendor/
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PHP
+*.log
+.php_cs.cache
+.phpstan.cache
+
+# Testing
+coverage/
+.phpunit.result.cache
+clover.xml
+
+# Build
+dist/
+build/
+
+# OS
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride

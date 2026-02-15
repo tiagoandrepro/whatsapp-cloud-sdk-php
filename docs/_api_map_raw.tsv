@@ -1,0 +1,163 @@
+folder	name	method	path	auth	body_mode
+Get Started	Subscribe to your WABA	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/subscribed_apps	bearer	
+Get Started	Get Phone Number ID	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/phone_numbers	bearer	
+Get Started	Register Phone Number	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/register	bearer	raw
+Get Started	Send Test Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Get Started	Debug Access Token	GET	https://graph.facebook.com/{{Version}}/debug_token?input_token={{User-Access-Token}}	bearer	
+WhatsApp Business Accounts (WABAs)	Get WABA	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}	bearer	
+WhatsApp Business Accounts (WABAs)	Get owned WABAs	GET	https://graph.facebook.com/{{Version}}/{{Business-ID}}/owned_whatsapp_business_accounts	bearer	
+WhatsApp Business Accounts (WABAs)	Get shared WABAs	GET	https://graph.facebook.com/{{Version}}/{{Business-ID}}/client_whatsapp_business_accounts	bearer	
+Registration	Register Phone	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/register	bearer	raw
+Registration	Deregister Phone	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/deregister	bearer	raw
+Phone Numbers	Get Phone Numbers	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/phone_numbers	bearer	
+Phone Numbers	Get Phone Number By ID	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}	bearer	
+Phone Numbers	Get Display Name Status (Beta)	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}?fields=name_status	bearer	
+Phone Numbers	Get Phone Numbers with Filtering (beta)	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/phone_numbers?fields=id,is_official_business_account,display_phone_number,verified_name&filtering=[{'field':'account_mode','operator':'EQUAL','value':'SANDBOX'}]	bearer	
+Phone Numbers	Request Verification Code	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/request_code	bearer	raw
+Phone Numbers	Verify Code	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/verify_code	bearer	raw
+Phone Numbers	Set Two-Step Verification Code	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}	bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Text Message	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Text Message with Show Security Notifications	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Message with Reaction	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Media Message with Image	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Media Message with Sticker	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Contact Messages	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Static Location Messages	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Message Triggered by Click to WhatsApp Ads	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Unknown Messages	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Message Status Update Notifications	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Callback from a Quick Reply Button Click	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Sent - User Initiated	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Sent - Business-Initiated	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Sent - Business Reply to User	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Delivered - User Initiated	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Delivered - Business from User-Initiated	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Delivered - Business Delivered from User	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Deleted	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Message Failed	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Product Enquiry Message	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Received Order Messages	VIEW		bearer	raw
+Webhook Subscriptions / Webhook Payload Reference	Status: Transaction Status - Order Details Message	VIEW		bearer	raw
+Webhook Subscriptions	Subscribe to a WABA	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/subscribed_apps	bearer	
+Webhook Subscriptions	Get All Subscriptions for a WABA	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/subscribed_apps	bearer	
+Webhook Subscriptions	Unsubscribe from a WABA	DELETE	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/subscribed_apps	bearer	
+Webhook Subscriptions	Override Callback URL	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/subscribed_apps	bearer	raw
+Messages	Send Text Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Text Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Text Message with Preview URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply with Reaction Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Image Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Image Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Image Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Image Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Audio Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Audio Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Audio Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Audio Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Document Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Document Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Document Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Document Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Sticker Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Sticker Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Sticker Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Sticker Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Video Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Video Message by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Video Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Video Message by URL	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Contact Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Contact Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Location Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to Location Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Message Template Text	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Message Template Media	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Message Template Interactive	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send List Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply to List Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Reply Button	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Mark Message As Read	PUT	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Single Product Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Multi-Product Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Catalog Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Messages	Send Catalog Template Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Templates	Get template by ID (default fields)	GET	https://graph.facebook.com/{{Version}}/<TEMPLATE_ID>	bearer	
+Templates	Get template by name (default fields)	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates?name=<TEMPLATE_NAME>	bearer	
+Templates	Get all templates (default fields)	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	
+Templates	Get namespace	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}?fields=message_template_namespace	bearer	
+Templates	Create authentication template w/ OTP copy code button	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create authentication template w/ OTP one-tap autofill button	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create catalog template	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create multi-product message template	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create template w/ text header, text body, text footer, and 2 quick reply buttons	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create template w/ image header, text body, text footer, and 2 call-to-action buttons	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create template w/ location header, text body, text footer, and a website buttons	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Create template w/ document header, text body, a phone number button, and a URL button	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Templates	Edit template	POST	https://graph.facebook.com/{{Version}}/<TEMPLATE_ID>	bearer	raw
+Templates	Delete template by name	DELETE	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates?name=<TEMPLATE_NAME>	bearer	
+Templates	Delete template by ID	DELETE	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates?hsm_id=<HSM_ID>&name=<NAME>	bearer	
+Flows / Create Flow	Create Flow	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/flows	bearer	formdata
+Flows / Create Flow	Migrate Flows	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/migrate_flows	bearer	formdata
+Flows / Create Flow	Get Flow	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=id,name,categories,preview,status,validation_errors,json_version,data_api_version,data_channel_uri,health_status,whatsapp_business_account,application	bearer	
+Flows / Create Flow	Get Preview URL	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=preview.invalidate(false)	bearer	
+Flows / Create Flow	List Flows	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/flows	bearer	
+Flows / Update Flow	Update Flow JSON	POST	https://graph.facebook.com/{{Version}}/{{Flow-ID}}/assets	bearer	formdata
+Flows / Update Flow	Publish Flow	POST	https://graph.facebook.com/{{Version}}/{{Flow-ID}}/publish	bearer	
+Flows / Update Flow	Update Flow Metadata	POST	https://graph.facebook.com/{{Version}}/{{Flow-ID}}	bearer	formdata
+Flows / Update Flow	List Assets (Get Flow JSON URL)	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}/assets	bearer	formdata
+Flows / Update Flow	Deprecate Flow	POST	https://graph.facebook.com/{{Version}}/{{Flow-ID}}/deprecate	bearer	
+Flows / Update Flow	Delete Flow	DELETE	https://graph.facebook.com/{{Version}}/{{Flow-ID}}	bearer	
+Flows / Setup Endpoint Encryption	Set Encryption Public Key	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_business_encryption	bearer	formdata
+Flows / Setup Endpoint Encryption	Get Encryption Public Key	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_business_encryption	bearer	
+Flows / Send Flow	Send Draft Flow by Name	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Flows / Send Flow	Send Draft Flow by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Flows / Send Flow	Send Published Flow by Name	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Flows / Send Flow	Send Published Flow by ID	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Flows / Send Flow	Create Flow Template Message by Name	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Flows / Send Flow	Create Flow Template Message by Flow JSON	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Flows / Send Flow	Create Flow Template Message by ID	POST	https://graph.facebook.com/{{Version}}/{{WABA-ID}}/message_templates	bearer	raw
+Flows / Send Flow	Send Flow Template Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Flows / Get Endpoint Metrics	Get Endpoint Request Count Metric	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=metric.name(ENDPOINT_REQUEST_COUNT).granularity(DAY).since(2024-01-28).until(2024-01-30)	bearer	
+Flows / Get Endpoint Metrics	Get Endpoint Request Error Metric	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=metric.name(ENDPOINT_REQUEST_ERROR).granularity(DAY).since(2024-01-28).until(2024-01-30)	bearer	
+Flows / Get Endpoint Metrics	Get Endpoint Request Error Rate Metric	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=metric.name(ENDPOINT_REQUEST_ERROR_RATE).granularity(LIFETIME).since(2024-01-28).until(2024-01-30)	bearer	
+Flows / Get Endpoint Metrics	Get Endpoint Request Latencies Metric	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=metric.name(ENDPOINT_REQUEST_LATENCY_SECONDS_CEIL).granularity(DAY).since(2024-01-28).until(2024-01-30)	bearer	
+Flows / Get Endpoint Metrics	Get Endpoint Availability Metric	GET	https://graph.facebook.com/{{Version}}/{{Flow-ID}}?fields=metric.name(ENDPOINT_AVAILABILITY).granularity(DAY).since(2024-01-28).until(2024-01-30)	bearer	
+Media	Upload Image	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/media	bearer	formdata
+Media	Upload Sticker	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/media	bearer	formdata
+Media	Upload Audio	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/media	bearer	raw
+Media	Retrieve Media URL	GET	https://graph.facebook.com/{{Version}}/{{Media-ID}}?phone_number_id=<PHONE_NUMBER_ID>	bearer	
+Media	Delete Media	DELETE	https://graph.facebook.com/{{Version}}/{{Media-ID}}/?phone_number_id=<PHONE_NUMBER_ID>	bearer	formdata
+Media	Download Media	GET	https://graph.facebook.com/{{Version}}/{{Media-URL}}	bearer	
+Typing indicators	Send typing indicator and read receipt	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Business Profiles	Resumable Upload - Create an Upload Session	POST	https://graph.facebook.com/{{Version}}/app/uploads/?file_length=<YOUR_FILE_LENGTH>&file_type=image/jpeg&file_name=myprofile.jpg	bearer	
+Business Profiles	Resumable Upload - Upload File Data	POST	https://graph.facebook.com/{{Version}}/{{Upload-ID}}	bearer	file
+Business Profiles	Resumable Upload - Query File Upload Status	GET	https://graph.facebook.com/{{Version}}/{{Upload-ID}}	bearer	
+Business Profiles	Get Business Profile	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_business_profile	bearer	
+Business Profiles	Update Business Profile	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_business_profile	bearer	raw
+Commerce Settings	Get commerce settings	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_commerce_settings	bearer	
+Commerce Settings	Set or update commerce settings	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/whatsapp_commerce_settings?is_cart_enabled=true&is_catalog_visible=true	bearer	
+Payments API - SG	Send Order Details Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Payments API - SG	Send Order Status Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Payments API - IN	Send Order Details Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Payments API - IN	Send Order Status Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+QR codes	Get QR code	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls/<QR_CODE_ID>	bearer	
+QR codes	Get all QR codes (default fields)	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls	bearer	raw
+QR codes	Get all QR codes (specific fields)	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls?fields=code,prefilled_message,qr_image_url.format(SVG)	bearer	raw
+QR codes	Get QR code SVG image URL	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls?fields=prefilled_message,deep_link_url,qr_image_url.format(SVG)&code=<QR_CODE_ID>	bearer	
+QR codes	Get QR code PNG image URL	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls?fields=prefilled_message,deep_link_url,qr_image_url.format(PNG)&code=<QR_CODE_ID>	bearer	
+QR codes	Create QR code	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls	bearer	raw
+QR codes	Update Message QR Code.	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls	bearer	raw
+QR codes	Delete QR code	DELETE	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/message_qrdls/<QR_CODE_ID>	bearer	
+Business Portfolio	Get Business Portfolio (Specific Fields)	GET	https://graph.facebook.com/{{Version}}/{{Business-ID}}?fields=id,name,timezone_id	bearer	
+Analytics	Get analytics	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}?fields=analytics.start(1680503760).end(1680564980).granularity(DAY).phone_numbers([]).country_codes(["US", "BR"])	bearer	
+Analytics	Get conversation analytics	GET	https://graph.facebook.com/{{Version}}/{{WABA-ID}}?fields=conversation_analytics.start(1656661480).end(1674859480).granularity(MONTHLY).conversation_directions(["business_initiated"]).dimensions(["conversation_type", "conversation_direction"])	bearer	
+Billing	Get credit lines	GET	https://graph.facebook.com/{{Version}}/{{Business-ID}}/extendedcredits	bearer	
+OnPrem Account Migration	Migrate Account	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/register	bearer	raw
+Block Users	Get blocked users	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/block_users	bearer	
+Block Users	Block user(s)	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/block_users	bearer	raw
+Block Users	Unblock user(s)	DELETE	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/block_users	bearer	raw
+Business Compliance	Get India-based business compliance info	GET	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/business_compliance_info	bearer	
+Business Compliance	Add India-based business compliance info	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/business_compliance_info	bearer	raw
+Examples	Send Sample Text Message	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Examples	Send Sample Shipping Confirmation Template	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
+Examples	Send Sample Issue Resolution Template	POST	https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages	bearer	raw
